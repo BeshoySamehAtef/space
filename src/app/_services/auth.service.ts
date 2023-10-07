@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { User } from '../_models/userAuth.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  baseUrl = 'hhttps://reqres.in/api';
+  readonly baseUrl = 'https://reqres.in/api';
   constructor(
-    private http: HttpClient,
-  ) { }
+    private readonly http: HttpClient,
+  ) {}
 
-  login(email: string, password: string) {
-    return this.http.post<any>(`${this.baseUrl}/login`, { email, password });
+  login(userForm:any) {
+    return this.http.post<any>(`${this.baseUrl}/login`, {'email':userForm.username ,'password':userForm.password});
   }
 
-
+  
 }

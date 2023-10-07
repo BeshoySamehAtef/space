@@ -1,1 +1,2 @@
 <p>users works!</p>
+<div *ngIf="secretData$ | async as secretData"> {{secretData.data | json}}</div>
