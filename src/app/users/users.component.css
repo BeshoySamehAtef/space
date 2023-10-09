@@ -1,0 +1,51 @@
+.users-bar {
+    background-color: red;
+}
+
+.card {
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.card-header {
+    overflow: hidden;
+    padding: 0;
+    margin: 14px;
+}
+
+.card-header img {
+    height: 57px;
+    width: 57px;
+    object-fit: cover;
+    object-position: center;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-block {
+    display: flex;
+    width: calc(100% - 100px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* right side */
+
+#sidebar {
+    background-color: #F5F5F5;
+}
+
+.selected-user img {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.selected-user h3 {
+    font-size: 25px;
+    color: #34495E;
+}

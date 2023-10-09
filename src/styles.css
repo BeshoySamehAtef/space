@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main-btn {
+    min-width: 100px;
+    border-radius: 100px;
+}

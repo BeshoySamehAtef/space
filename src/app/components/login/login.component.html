@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="login-container shadow">
+        <div class="row">
+            <div class="col-md-6 img-container"></div>
+            <div class="col-md-6 login-content">
+                <h2>Welcome back!</h2>
+                <p>Please login to access your Spaces Dashboard</p>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <app-input type="text" [control]="title" label="Username*" placeholder="Username..."></app-input>
+                    <app-input type="password" [control]="password" label="Password*" placeholder="Password..."></app-input>
+                    
+                    <div class="submit-container mt-2">
+                        <a routerLink="">Forgot password?</a>
+                        <button class="btn main-btn submit-btn" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

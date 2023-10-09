@@ -7,6 +7,7 @@ import { StoreModule, reduceState } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { dataReducer } from '../store/data/data.reducer';
 import { DataEffects } from '../store/data/data.effects';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -17,6 +18,7 @@ import { DataEffects } from '../store/data/data.effects';
   imports: [
     CommonModule,
     UsersRoutingModule,
+    SharedModule,
     StoreModule.forFeature('data',dataReducer),
     EffectsModule.forFeature([DataEffects]),
   ]

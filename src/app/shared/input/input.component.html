@@ -1,1 +1,10 @@
-<p>input works!</p>
+<div class="form-group mt-2">
+    <label [ngClass]="labelClass">{{label}}</label>
+    <input [ngClass]="(!control.valid && control.touched) ?fieldClass+' invalid-input':fieldClass" [type]="type" [placeholder]="placeholder" [formControl]="control">
+    <ng-container *ngIf=" (!control.valid && control.touched)" class="error-msg">
+        <div *ngIf="control.errors?.['required']" class="error-msg">
+            This field is required*
+        </div>
+    </ng-container>
+
+</div>

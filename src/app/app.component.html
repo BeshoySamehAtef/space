@@ -1,13 +1,7 @@
-<button type="button" routerLink="/users">Customers</button>
-<button type="button" routerLink="">Home</button>
-<button type="button" routerLink="/login">login</button>
+<div class="app-container">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+</div>
+<!-- navbar -->
 
-<div *ngIf="token$ | async as token; else test">is logged in </div>
-
-<ng-template #test>
-  not logged in
-</ng-template>
-
-
-<router-outlet></router-outlet>
 

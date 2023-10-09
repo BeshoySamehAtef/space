@@ -1,0 +1,43 @@
+.login-container{
+    max-width: 900px;
+    margin: 30px auto 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.img-container {
+    background-image: url('../../../assets/loginImg.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+h2 {
+    font-size: 25px;
+    color: #34495E;
+}
+
+p {
+    font-size: 15;
+    color: #7F8C8D;
+}
+
+.login-content {
+    margin: 135px auto;
+    padding: 0 25px;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.submit-btn {
+    background-color: #8E44AD;
+    color: #fff;
+}

@@ -1,0 +1,16 @@
+.navbar {
+    background-color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.nav-item {
+    margin: 0 10px;
+}
+
+.login-btn {
+    background-color: #8e44ad;
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+}

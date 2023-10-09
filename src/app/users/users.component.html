@@ -1,2 +1,59 @@
-<p>users works!</p>
-<div *ngIf="secretData$ | async as secretData"> {{secretData.data | json}}</div>
+<nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+        <div class="row">
+            sdfsdf
+        </div>
+    </div>
+</nav>
+
+<div class="container user-list-container">
+    <div class="row flex-nowrap row-no-gutters">
+        <div class="col-sm px-0 border-start">
+            <div *ngIf="secretData$ | async as secretData">
+                <div *ngFor="let user of secretData.data; let i = index">
+                    <div class="card flex-row" data-bs-target="#sidebar" data-bs-toggle="collapse" (click)="toggleSideBar(i)">
+                        <div class="card-header border-0 rounded-circle">
+                            <img [src]="user.avatar" alt="">
+                        </div>
+                        <div class="card-block px-2">
+                            <h4 class="card-title"> {{user.first_name}} {{user.last_name}}</h4>
+                            <div class="btns-group">
+                                <span class="action-btns">
+                                    <button class="btn"><i class="fa fa-edit"></i></button>
+                                    <button class="btn"><i class="fa fa-trash"></i></button>
+                                </span>
+                                <button class="btn"><i class="fa fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-auto px-0 collapse collapse-horizontal overflow-hidden" id="sidebar">
+            <div class="border-0 text-center text-sm-start selected-user" id="sidebar-menu">
+                <div class="text-end">
+                    <button class="btn" data-bs-target="#sidebar" data-bs-toggle="collapse"><i class="fa fa-close"></i></button>
+                </div>
+                <div class="text-center">
+                    <img class="rounded-circle" [src]="selectedUser?.avatar" alt="user-avatar">
+                    <h2>{{selectedUser?.first_name}} {{selectedUser?.last_name}}</h2>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- <button class="btn btn-primary" (click)="openModal()">Open Modal</button>
+<ng-container #modalContainer></ng-container> -->
+
+
+<button (click)="openModal()">Open Modal</button>
+
+<app-popup [title]="modalTitle" [isOpen]='showModal' (closed)="onModalClosed()" (confirmed)="onModalConfirmed()" [userData]="selectedUser" [isForm]=true>
+  <p>Modal content</p>
+</app-popup>
+
+

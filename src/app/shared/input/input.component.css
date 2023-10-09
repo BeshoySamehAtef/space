@@ -1,0 +1,23 @@
+.form-label {
+    font-size: 14px;
+    color: #7F8C8D;
+    display: block;
+}
+
+.form-field{
+    width: 100%;
+    border: 1px solid #D6DBE4;
+    border-radius: 3px;
+    padding: 7px 12px;
+}
+
+.invalid-input {
+    color: red;
+    border-color: red;
+}
+
+.error-msg{
+    color: red;
+    text-align: right;
+    font-size: 12px;
+}

@@ -1,0 +1,24 @@
+<div class="modal" [class.showModel]="isOpen" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="img-container text-center">
+                    <img [src]="userProfile?.avatar" alt="profile-pic">
+                </div>
+                <div *ngIf="isForm">
+                    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                        <app-input type="text" [control]="username" label="Name*" placeholder="Name..."></app-input>
+                        <app-input type="text" [control]="jobTitle" label="Job Title"
+                            placeholder="job title..."></app-input>
+                    </form>
+                </div>
+                <!-- <ng-content></ng-content> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn main-btn submit-btn" data-bs-dismiss="modal"
+                    (click)="closeModal()">Cancel</button>
+                <button type="button" class="btn main-btn submit-btn" (click)="confirmModal()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

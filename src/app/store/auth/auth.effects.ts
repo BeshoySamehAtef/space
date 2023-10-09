@@ -5,6 +5,7 @@ import { of } from 'rxjs';
 
 import { AuthService } from '../../_services/auth.service';
 import { AuthActionTypes, Login, LoginSuccess, LoginFailure, Logout } from './auth.actions';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthEffects {
@@ -25,8 +26,7 @@ export class AuthEffects {
       this.actions$.pipe(
         ofType<LoginSuccess>(AuthActionTypes.LoginSuccess),
         tap((action) => {
-          // Save the token or user data to localStorage or any other storage mechanism
-          // You can also perform any other necessary actions upon successful login
+          this.router.navigate(['/users']);
         })
       ),
     { dispatch: false }
@@ -49,12 +49,11 @@ export class AuthEffects {
       this.actions$.pipe(
         ofType<Logout>(AuthActionTypes.Logout),
         tap((action) => {
-          // Clear the token or user data from localStorage or any other storage mechanism
-          // You can also perform any other necessary actions upon logout
+          //  logout actions
         })
       ),
     { dispatch: false }
   );
 
-  constructor(private actions$: Actions, private authService: AuthService) {}
+  constructor(private actions$: Actions, private authService: AuthService, private router:Router) {}
 }

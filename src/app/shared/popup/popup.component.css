@@ -1,0 +1,46 @@
+.showModel {
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    overflow: initial;
+    max-width: 360px;
+    margin: auto;
+}
+
+.modal-body {
+    overflow: initial;
+}
+
+.img-container img {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: -65px;
+}
+
+.modal-footer {
+    justify-content: space-between;
+}
+
+.cancel-btn {
+    width: 45%;
+    background-color: #F5F5F5;
+    color: #8E44AD;
+    border: 1px solid #8E44AD;
+    font-size: 15px;
+}
+
+.submit-btn {
+    width: 45%;
+    background-color: #8E44AD;
+    border: 1px solid #8E44AD;
+    font-size: 15px;
+    color: #fff;
+}
+
+
